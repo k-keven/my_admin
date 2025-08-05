@@ -1,0 +1,124 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 主题相关变量 */
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #333;
+  --secondary-text-color: #666;
+  --card-bg: #fff;
+  --border-color: #e4e7ed;
+  --hover-color: #f5f7f9;
+  --shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --navbar-bg: #fff;
+  --sidebar-bg: #f0f2f5;
+  --sidebar-text: #333;
+  --sidebar-hover: #e6e8eb;
+  --menu-active-bg: #1890ff;
+  --menu-active-text: #fff;
+}
+
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #e5e5e5;
+  --secondary-text-color: #aaa;
+  --card-bg: #242424;
+  --border-color: #3f3f3f;
+  --hover-color: #2a2a2a;
+  --shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3);
+  --navbar-bg: #242424;
+  --sidebar-bg: #141414;
+  --sidebar-text: #e5e5e5;
+  --sidebar-hover: rgba(255, 255, 255, 0.1);
+  --menu-active-bg: #1890ff;
+  --menu-active-text: #fff;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 布局 */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* 常用类 */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* 图标类 */
+.icon-money:before {
+  content: "\e7fd";
+}
+
+.icon-order:before {
+  content: "\e7b5";
+}
+
+.icon-user:before {
+  content: "\e7ae";
+}
+
+.icon-conversion:before {
+  content: "\e623";
+}
+
+.icon-arrow-up:before {
+  content: "\e7eb";
+}
+
+.icon-arrow-down:before {
+  content: "\e7ec";
+}
+
+.icon-warning:before {
+  content: "\e683";
+} 
